@@ -1,0 +1,306 @@
+.main_title_a, .main_title_a:hover, .main_title_a:active {
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.hljs {
+    background: var(--bg-color-2);
+}
+
+select {
+    display: inline-block;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color-0);
+    background-image: none;
+    border: 1px solid var(--sub-border-color);
+    border-radius: 12px;
+}
+
+input {
+    background: var(--bg-color-0);
+    border: 1px solid var(--border-color);
+    padding: 5px 8px;
+    border-radius: 16px;
+}
+
+.font-size-1 {
+    font-size: 120%;
+}
+
+form#searchform {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+button#searchGoButton {
+    border-radius: 0 1rem 1rem 0 !important;
+    height: 2.3rem;
+}
+
+button#searchSearchButton {
+    border-radius: 0 !important;
+    height: 2.3rem;
+}
+
+.wiki-content .wiki-link-external:before {
+    border-radius: 12px !important;
+}
+
+h1#main_title {
+    margin-bottom: 0;
+    margin-top: 0.3rem;
+    padding-bottom: 4px;
+    border-bottom: none;
+}
+
+a.navbar-brand {
+    margin-right: 10px;
+    width: auto;
+}
+
+blockquote {
+    border-left: 5px solid var(--main-color);
+}
+
+td {
+    padding: 5px 10px;
+}
+
+#toc {
+    border: 1px solid var(--sub-border-color);
+    display: inline-block;
+    padding: 20px 26px 22px 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#toc-name {
+    font-size: 1.25rem;
+    display: block;
+    margin-left: -8px;
+    margin-top: -10px;
+    margin-bottom: -40px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+div.scroll-buttons a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 43px;
+    border: 2px solid var(--sub-border-color);
+    text-decoration: none;
+    text-align: center;
+    background: var(--button-bg-color);
+    color: var(--text-color-1);
+}
+
+#scroll-button-toc {
+    margin-right: -2px;
+    border-radius: 20px 0 0 20px;
+}
+
+#scroll-button-left {
+    margin-right: -2px;
+    font-size: 19.7px;
+}
+
+#scroll-button-right {
+    border-radius: 0 20px 20px 0;
+    font-size: 19.7px;
+}
+
+div.scroll-buttons {
+    position: fixed;
+    float: right;
+    height: 45px;
+    text-align: right;
+    font-size: 1.3rem;
+    z-index: 10000;
+    bottom: 16px;
+    right: 16px;
+    opacity: 0.4;
+}
+
+.scroll-buttons .fa {
+    margin-top: 5px;
+}
+
+.navbar-brand {
+    margin: auto;
+    font-size: 28px;
+}
+
+.horizon .nav-wrapper .navbar {
+    gap: .45rem;
+}
+
+.horizon .nav-wrapper .navbar .navbar-nav .nav-link,
+.horizon .nav-wrapper .navbar .navbar-login .dropdown-toggle,
+.horizon .nav-wrapper .navbar .navbar-alarm-item,
+.horizon .nav-wrapper .navbar .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+}
+
+.horizon .nav-wrapper .navbar .navbar-nav .nav-link .fa-solid,
+.horizon .nav-wrapper .navbar .navbar-nav .nav-link .fa-regular,
+.horizon .nav-wrapper .navbar .navbar-login .dropdown-toggle .fa-solid,
+.horizon .nav-wrapper .navbar .navbar-login .dropdown-toggle .fa-regular,
+.horizon .nav-wrapper .navbar .navbar-alarm-item .fa-solid {
+    width: 1.1rem;
+    text-align: center;
+}
+
+.horizon .nav-wrapper .navbar .navbar-login .dropdown-toggle,
+.horizon .nav-wrapper .navbar .navbar-alarm-item {
+    justify-content: center;
+}
+
+.horizon .dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.horizon .dropdown-menu .dropdown-item .fa-solid,
+.horizon .dropdown-menu .dropdown-item .fa-regular {
+    width: 1.1rem;
+    text-align: center;
+}
+
+.horizon .dropdown-menu .theme-toggle-item {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: var(--text-color);
+    padding: .55rem 1rem;
+    text-align: left;
+}
+
+.horizon .dropdown-menu .theme-toggle-item:hover {
+    background: var(--bg-color-2);
+}
+
+button, a.info, [class*="_base_"][class*="_button_"] {
+    border-radius: 12px !important;
+}
+
+button:not(.table-buttons-wrap *, .table-buttons-wrap),
+a.info:not(.table-buttons-wrap *, .table-buttons-wrap),
+[class*="_base_"][class*="_button_"]:not(.table-buttons-wrap *, .table-buttons-wrap) {
+    padding: 0.4rem 0.8rem !important;
+}
+
+button.active, a.info.active {
+    background: var(--bg-color-2);
+}
+
+form li button {
+    padding: .4em 1em !important;
+}
+
+button#save {
+    background-color: var(--menu-button-color);
+    color: white;
+    margin-right: 5px;
+}
+
+button#save:hover {
+    background-color: var(--menu-button-color);
+    opacity: 0.8;
+}
+
+button#preview {
+    background-color: var(--sub-color);
+    color: white;
+}
+
+button#preview:hover {
+    background-color: var(--sub-color);
+    opacity: 0.8;
+    color: white;
+}
+
+button#come {
+    background-color: #f0ad4e;
+    color: white;
+    margin-left: 5px;
+}
+
+button#come:hover {
+    background-color: #ec971f;
+    color: white;
+}
+
+.category {
+    border: 1px solid var(--sub-border-color);
+    border-radius: 5px;
+    font-size: .9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 4px 4px 4px 6px;
+    display: inline-block;
+    width: 100%;
+}
+
+#redirect {
+    background-color: #d9edf7;
+    border: 1px solid #bcdff1;
+    border-radius: 0.25rem;
+    color: #31708f;
+    font-size: .9rem;
+    margin-bottom: 1.2rem;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+    width: 100%;
+}
+
+li.nav-item {
+    margin: 0;
+}
+
+.horizon .content-wrapper .horizon-sidebar .horizon-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active::before, .horizon .content-wrapper .horizon-sidebar .horizon-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before, .horizon .content-wrapper .horizon-sidebar .horizon-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before, .horizon .content-wrapper .horizon-sidebar .horizon-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active::before {
+    width: 7.5rem;
+}
+
+.horizon .content-wrapper .horizon-sidebar .horizon-right-fixed .live-recent .live-recent-header .nav .nav-item + .nav-item {
+    margin-left: 0;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.35rem;
+}
+
+.horizon .content-wrapper .horizon-content .horizon-content-main {
+    overflow: visible;
+}
+
+th[rowspan], td[rowspan] {
+    position: initial;
+}
+
+.nav-tabbar {
+    position: fixed;
+    bottom: 18px;
+}
+
+table {
+    background-color: transparent;
+}
+
+.static-file button {
+    margin-left: 10px !important;
+    float: none !important;
+}
+
+textarea:focus, select:focus, .form-select:focus, .form-control:focus, input[type="text"]:focus, input[type="search"]:focus, button:focus {
+    outline: none !important;
+    background-color: var(--bg-color-2) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
