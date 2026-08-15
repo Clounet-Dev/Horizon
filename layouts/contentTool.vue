@@ -122,17 +122,6 @@ export default {
                             class: 'd-none d-md-inline-block'
                         });
                     }
-                    this.main.push({
-                        key: 'backlink',
-                        to: this.doc_action_link(this.data.document, 'backlink'),
-                        title: '<i class="fa-solid fa-link"></i> 역링크'
-                    });
-                    this.main.push({
-                        key: 'discuss',
-                        to: this.doc_action_link(this.data.document, 'discuss'),
-                        class: this.data.discuss_progress ? 'btn-discuss-progress' : null,
-                        title: '<i class="fa-solid fa-comments"></i> 토론'
-                    });
                     if (this.data.editable === true && this.data.edit_acl_message) {
                         this.main.push({
                             key: 'edit-request',
@@ -153,16 +142,16 @@ export default {
                         });
                     }
                     this.main.push({
+                        key: 'discuss',
+                        to: this.doc_action_link(this.data.document, 'discuss'),
+                        class: this.data.discuss_progress ? 'btn-discuss-progress' : null,
+                        title: '<i class="fa-solid fa-comments"></i> 토론'
+                    });
+                    this.main.push({
                         key: 'history',
                         to: this.doc_action_link(this.data.document, 'history', this.data.rev ? { from: this.data.rev } : undefined),
                         title: '<i class="fa-solid fa-clock-rotate-left"></i> 역사'
                     });
-                    this.main.push({
-                        key: 'acl',
-                        to: this.doc_action_link(this.data.document, 'acl'),
-                        title: '<i class="fa-solid fa-shield-halved"></i> ACL'
-                    });
-
                     if (this.data.user) {
                         this.menu.push({
                             key: 'contribution',
@@ -206,6 +195,16 @@ export default {
                         to: this.doc_action_link(this.data.document, 'delete'),
                         html: '<i class="fa-solid fa-trash-can"></i> 삭제',
                         class: 'd-md-none'
+                    });
+                    this.menu.push({
+                        key: 'backlink',
+                        to: this.doc_action_link(this.data.document, 'backlink'),
+                        title: '<i class="fa-solid fa-link"></i> 역링크'
+                    });
+                    this.menu.push({
+                        key: 'acl',
+                        to: this.doc_action_link(this.data.document, 'acl'),
+                        title: '<i class="fa-solid fa-shield-halved"></i> ACL'
                     });
                 }
                 return;

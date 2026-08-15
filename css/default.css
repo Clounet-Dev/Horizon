@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6, b {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: revert !important;
+    margin-top: revert;
 }
 
 h1 { font-size: 28.8px; }
