@@ -77,6 +77,10 @@ h1, h2, h3, h4, h5, h6, b {
     font-weight: 700;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: revert !important;
+}
+
 h1 { font-size: 28.8px; }
 h2 { font-size: 25.9px; }
 h3 { font-size: 23px; }
@@ -103,6 +107,7 @@ ol {
 }
 
 pre {
+    width: fit-content;
     display: block !important;
     color: var(--text-color) !important;
     word-break: break-all !important;
