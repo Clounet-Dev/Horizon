@@ -403,7 +403,7 @@ del, s, strike {
 
 .login-dropdown-name {
     padding: 0.2rem 0.8rem;
-    text-align: right;
+    text-align: left;
     color: var(--text-color);
 }
 
