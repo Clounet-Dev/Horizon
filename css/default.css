@@ -588,7 +588,7 @@ div#sidebar-0-name3 {
     display: inline-flex;
     white-space: nowrap;
     text-overflow: ellipsis;
-    gap: .45rem;
+    gap: .65rem;
     align-items: center;
 }
 
@@ -955,4 +955,96 @@ div:has(a[href^="/w/"]) :is(h2, h3) {
 
 .nav-wrapper .fa-caret-down {
     font-size: .8rem;
+}
+
+.account-switch-item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-color);
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.dropdown-menu .account-switch-item:hover {
+    border-radius: 12px;
+    background-color: var(--bg-color-0);
+}
+
+.account-switch-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    padding: 0.4rem 0.8rem !important;
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.account-switch-name {
+    font-weight: 600;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.account-switch-logout {
+    background: rgba(239, 68, 68, 0.15);
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ef4444;
+    margin-right: 12px;
+    padding: 0;
+    flex: 0 0 26px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.account-switch-logout:hover {
+    background: rgba(239, 68, 68, 0.25);
+    color: #dc2626;
+}
+
+.theseed-dark-mode .account-switch-logout {
+    background: rgba(248, 113, 113, 0.15);
+    color: #f87171;
+}
+
+.theseed-dark-mode .account-switch-logout:hover {
+    background: rgba(248, 113, 113, 0.25);
+    color: #fca5a5;
+}
+
+.account-switch-avatar {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.dropdown-menu .account-empty {
+    opacity: 0.6;
+    color: var(--text-color-2) !important;
+    cursor: default !important;
+}
+
+.dropdown-menu .account-empty:hover {
+    background: transparent;
 }

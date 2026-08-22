@@ -99,6 +99,28 @@
                                 <i class="fa-solid fa-gear"></i><span>설정</span>
                             </button>
                             <div class="dropdown-divider"></div>
+
+                            <template v-if="isLoggedIn">
+                                <template v-if="secondaryAccounts.length">
+                                    <div v-for="(account, index) in secondaryAccounts" :key="account.uuid || account.name || index" class="dropdown-item account-switch-item">
+                                        <nuxt-link :to="switchAccountRoute(account)" class="account-switch-link">
+                                            <img v-if="account.avatar" class="account-switch-avatar" :src="account.avatar" :alt="account.name || 'account'">
+                                            <span v-else class="account-switch-avatar account-switch-avatar--fallback">{{ (account.name || '?').charAt(0).toUpperCase() }}</span>
+                                            <span class="account-switch-name">{{ account.name }}</span>
+                                        </nuxt-link>
+                                        <button type="button" class="account-switch-logout" @click.stop.prevent="logoutOtherAccount(account.uuid)">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </template>
+                                <button v-else class="dropdown-item account-empty" type="button" @click.prevent>
+                                    <i class="fa-solid fa-user-xmark"></i>
+                                    전환할 계정이 없습니다.
+                                </button>
+                                <button class="dropdown-item" @click="$router.push({path:'/member/login',query:{redirect:$route.fullPath}})"><i class="fa-solid fa-user-plus"></i> 계정 추가</button>
+                                <div class="dropdown-divider"></div>
+                            </template>
+
                             <button v-if="isLoggedIn" class="dropdown-item" @click="$router.push('/member/logout')"><i class="fa-solid fa-arrow-right-from-bracket"></i> 로그아웃</button>
                             <template v-else>
                                 <button class="dropdown-item" @click="$router.push('/member/login')"><i class="fa-solid fa-arrow-right-to-bracket"></i> 로그인</button>
@@ -453,6 +475,17 @@ export default {
                 ? pageData.copyright_text
                 : '';
         },
+        secondaryAccounts() {
+            const session = this.$store.state.session || {};
+            const currentUuid = session.account && session.account.uuid;
+            return (Array.isArray(session.otherAccounts) ? session.otherAccounts : [])
+                .filter(account => account && account.uuid && account.uuid !== currentUuid)
+                .map(account => ({
+                    uuid: account.uuid,
+                    name: account.name || account.uuid,
+                    avatar: account.gravatar_url || ''
+                }));
+        },
         skinConfig() {
             const fontSetting = this.$store.state.localConfig?.['horizon.font'] || 'auto';
             const fontFamily = fontSetting === 'browser' ? 'sans-serif' : '"Pretendard", sans-serif';
@@ -681,6 +714,15 @@ export default {
                 this.sidebarDocument = [];
                 this.sidebarDiscuss = [];
             }
+        },
+        switchAccountRoute(account) {
+            const uuid = account && account.uuid;
+            return uuid ? `/member/switch_account/${encodeURIComponent(uuid)}` : '/member/login';
+        },
+        async logoutOtherAccount(uuid) {
+            if (!uuid) return;
+            await this.internalRequestAndProcess(`/member/logout_other/${encodeURIComponent(uuid)}`, { method: 'POST' });
+            if (typeof window !== 'undefined') window.location.reload();
         }
     }
 };

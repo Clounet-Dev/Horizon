@@ -33,7 +33,7 @@
 }
 
 .horizon .nav-wrapper .navbar .navbar-login .login-dropdown-menu {
-    min-width: 17rem;
+    min-width: 16rem;
 }
 
 .horizon .nav-wrapper .navbar .navbar-login .login-dropdown-name {
@@ -200,4 +200,8 @@ input[type="file"]::-webkit-file-upload-button:hover {
 
 .wiki-content .wiki-image-info-btn {
     color: var(--a-color) !important;
+}
+
+div.acl-edit-group {
+    vertical-align: unset !important;
 }
