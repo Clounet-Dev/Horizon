@@ -676,6 +676,7 @@ div#sidebar-0-name3 {
 }
 
 .horizon .content-wrapper .horizon-content .horizon-content-main {
+    margin-bottom: 15px;
     margin-top: -20px;
     border: 1px solid var(--border-color);
     border-top: none;
@@ -1047,4 +1048,9 @@ div:has(a[href^="/w/"]) :is(h2, h3) {
 
 .dropdown-menu .account-empty:hover {
     background: transparent;
+}
+
+.or::before,
+.or::after {
+    border-top: 1px solid var(--sub-border-color) !important;
 }
