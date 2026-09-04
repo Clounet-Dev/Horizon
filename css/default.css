@@ -209,7 +209,7 @@ del, s, strike {
 }
 
 .horizon .content-wrapper .horizon-content {
-    padding-right: 0;
+    padding-right: 0 !important;
     flex: 1;
     min-width: 0;
     padding: 10px;
@@ -230,7 +230,6 @@ del, s, strike {
 }
 
 .horizon .nav-wrapper .navbar {
-    padding: 0.2rem 1rem 0 1rem;
     border: 0;
     border-radius: 0;
 }
@@ -1053,4 +1052,13 @@ div:has(a[href^="/w/"]) :is(h2, h3) {
 .or::before,
 .or::after {
     border-bottom: 1px solid var(--sub-border-color) !important;
+}
+
+ul li:has(pre)::marker {
+    display: none !important;
+    content: "" !important;
+}
+
+ul:has(pre) {
+    padding-left: 0 !important;
 }
