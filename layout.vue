@@ -140,10 +140,6 @@
             </nav>
         </div>
 
-        <div v-if="siteNotice" class="horizon-top-notice-bg">
-            <div class="horizon-top-notice" v-html="siteNotice"></div>
-        </div>
-
         <div class="menu-buttons">
             <a class="scroll-menu" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
         </div>
@@ -156,6 +152,11 @@
 
         <div class="content-wrapper">
             <div class="container-fluid horizon-content">
+
+                <div v-if="siteNotice" class="horizon-top-notice-bg">
+                    <div class="horizon-top-notice" v-html="siteNotice"></div>
+                </div>
+
                 <div class="horizon-content-header">
                     <content-tool @onClickEditBtn="showEditMessage" />
 
@@ -279,7 +280,7 @@ import SearchForm from './layouts/searchForm';
 import RecentCard from './layouts/recentCard';
 import ContentTool from './layouts/contentTool';
 import SettingModal from './components/settingModal';
-import License from './LICENSE.md?raw';
+import License from './LICENSE?raw';
 
 export default {
     mixins: [Common],
